@@ -75,16 +75,23 @@ WSGI_APPLICATION = 'Hello.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',  # Database engine
+#         'NAME': 'eventsmanage',                      # Database name
+#         'USER': 'postgres',                     # Database user
+#         'PASSWORD': '1234',             # Password for the user
+#         'HOST': 'localhost',                      # Database host (use 'localhost' for a local database)
+#         'PORT': '5432',                           # Database port
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',  # Database engine
-        'NAME': 'eventsmanage',                      # Database name
-        'USER': 'postgres',                     # Database user
-        'PASSWORD': '1234',             # Password for the user
-        'HOST': 'localhost',                      # Database host (use 'localhost' for a local database)
-        'PORT': '5432',                           # Database port
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 
 
 
